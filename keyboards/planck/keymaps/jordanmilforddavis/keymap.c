@@ -4,24 +4,22 @@
 #define NEXT_WORK LCTL(KC_RGHT)
 #define PREV_TAB  LCTL(LSFT(KC_TAB))
 #define NEXT_TAB  LCTL(KC_TAB)
-#define L1_SP     LT(1, KC_SPC)
-#define L2_TB     LT(2, KC_TAB)
-#define L3_RBRC   LT(3, KC_RBRC)
 
 enum planck_layers {
   _BASE,
   _NUM,
+  _SYMBOL,
   _FUNC,
   _SET
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BASE] = LAYOUT_planck_grid(
-    KC_QUOT    , KC_Q         , KC_W         , KC_E         , KC_R         , KC_T  , KC_Y    , KC_U         , KC_I         , KC_O         , KC_P            , KC_EQL  ,
-    KC_ESC     , LSFT_T(KC_A) , LCTL_T(KC_S) , LALT_T(KC_D) , LGUI_T(KC_F) , KC_G  , KC_H    , RGUI_T(KC_J) , RALT_T(KC_K) , RCTL_T(KC_L) , RSFT_T(KC_SCLN) , KC_MINS ,
-    KC_LSFT    , KC_Z         , KC_X         , KC_C         , KC_V         , KC_B  , KC_N    , KC_M         , KC_COMM      , KC_DOT       , KC_SLSH         , KC_LEAD ,
-    LGUI(KC_C) , LGUI(KC_V)   , PREV_WORK    , NEXT_WORK    , L1_SP        , L2_TB , KC_BSPC , KC_ENT       , PREV_TAB     , NEXT_TAB     , KC_LBRC         , L3_RBRC
-  ),
+    KC_QUOT    , KC_Q         , KC_W         , KC_E         , KC_R         , KC_T    , KC_Y , KC_U         , KC_I         , KC_O         , KC_P            , KC_EQL   ,
+    KC_ESC     , LSFT_T(KC_A) , LCTL_T(KC_S) , LALT_T(KC_D) , LGUI_T(KC_F) , KC_G    , KC_H , RGUI_T(KC_J) , RALT_T(KC_K) , RCTL_T(KC_L) , RSFT_T(KC_SCLN) , KC_MINS  ,
+    KC_LSFT    , KC_Z         , KC_X         , KC_C         , KC_V         , KC_B    , KC_N , KC_M         , KC_COMM      , KC_DOT       , KC_SLSH         , KC_LEAD  ,
+    LGUI(KC_C) , LGUI(KC_V)   , PREV_WORK    , NEXT_WORK    , LT(1         , KC_SPC) , LT(3 , KC_TAB)      , LT(2, KC_BSPC), KC_ENT       , PREV_TAB        , NEXT_TAB , KC_LBRC , LT(4 , KC_RBRC)
+  )            ,
 
   // Number layer
   [_NUM] = LAYOUT_planck_grid(
@@ -29,6 +27,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______ , _______ , _______ , _______ , _______ , _______ , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT , _______ , _______ ,
     _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ ,
     _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______
+  ),
+
+  // Symbol layer
+  [_SYMBOL] = LAYOUT_planck_grid(
+    _______ , LSFT(KC_1), LSFT(KC_2), LSFT(KC_3), LSFT(KC_4), LSFT(KC_5), LSFT(KC_6), LSFT(KC_7), LSFT(KC_8), LSFT(KC_9), LSFT(KC_0), _______,
+    _______ , _______ , _______  , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ ,
+    _______ , _______ , _______  , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ ,
+    _______ , _______ , _______  , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______
   ),
 
   // Function key layers
