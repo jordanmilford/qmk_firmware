@@ -32,6 +32,17 @@ enum unicode_names {
   EMPTYSET,
   AND,
   OR,
+  THEREFORE,
+  NABLA,
+  INTEGRAL,
+  SUM,
+  ALPHA,
+  BETA,
+  ELEMENTOF,
+  LAMDA,
+  PI,
+  FORALL,
+  EXISTS,
 };
 
 const uint32_t PROGMEM unicode_map[] = {
@@ -45,6 +56,16 @@ const uint32_t PROGMEM unicode_map[] = {
     [EMPTYSET]      = 0x2205,  // ∅
     [AND]           = 0x2227,  // ∧
     [OR]            = 0x2228,  // ∨
+    [THEREFORE]     = 0x2234,  // ∴
+    [NABLA]         = 0x2207,  // ∇
+    [INTEGRAL]      = 0x222B,  // ∫
+    [ALPHA]         = 0x03B1,  // α
+    [BETA]          = 0x03B2,  // β
+    [ELEMENTOF]     = 0x2208,  // ∈
+    [LAMDA]         = 0x03BB,  // λ
+    [PI]            = 0x03C0,  // π
+    [FORALL]        = 0x2200,  // ∀
+    [EXISTS]        = 0x2203,  // ∃
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
