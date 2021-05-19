@@ -1,5 +1,8 @@
 #pragma once
 
+#undef DEBOUNCE
+#define DEBOUNCE 15
+
 // Leader key
 #define LEADER_TIMEOUT 450
 #define LEADER_PER_KEY_TIMING
@@ -16,7 +19,7 @@
 #define RGBLIGHT_EFFECT_RAINBOW_SWIRL
 
 // Tap-hold settings
-#define TAPPING_TERM 300
+#define TAPPING_TERM 200
 #define PERMISSIVE_HOLD
 #define IGNORE_MOD_TAP_INTERRUPT
 

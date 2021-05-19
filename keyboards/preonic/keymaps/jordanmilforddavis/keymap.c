@@ -61,12 +61,12 @@ enum preonic_layers {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BASE] = LAYOUT_preonic_grid(
-    KC_GRV  , KC_1    , KC_2    , KC_3    , KC_4    , KC_5    , KC_6    , KC_7    , KC_8    , KC_9    , KC_0    , KC_BSLS ,
+    KC_GRV     , KC_1         , KC_2         , KC_3         , KC_4         , KC_5    , KC_6 , KC_7         , KC_8         , KC_9         , KC_0            , KC_BSLS  ,
     KC_QUOT    , KC_Q         , KC_W         , KC_E         , KC_R         , KC_T    , KC_Y , KC_U         , KC_I         , KC_O         , KC_P            , KC_EQL   ,
     KC_ESC     , LSFT_T(KC_A) , LCTL_T(KC_S) , LALT_T(KC_D) , LGUI_T(KC_F) , KC_G    , KC_H , RGUI_T(KC_J) , RALT_T(KC_K) , RCTL_T(KC_L) , RSFT_T(KC_SCLN) , KC_MINS  ,
-    TG(2)    , KC_Z         , KC_X         , KC_C         , KC_V         , KC_B    , KC_N , KC_M         , KC_COMM      , KC_DOT       , KC_SLSH         , KC_LEAD  ,
-    LGUI(KC_C) , LGUI(KC_V)   , PREV_WORK    , NEXT_WORK    , LT(1         , KC_SPC) , LT(2 , KC_TAB)      , KC_BSPC, KC_ENT       , PREV_TAB        , NEXT_TAB , KC_LBRC , LT(3 , KC_RBRC)
-  )            ,
+    TG(2)      , KC_Z         , KC_X         , KC_C         , KC_V         , KC_B    , KC_N , KC_M         , KC_COMM      , KC_DOT       , KC_SLSH         , KC_LEAD  ,
+    LGUI(KC_C) , LGUI(KC_V)   , PREV_WORK    , NEXT_WORK    , LT(1         , KC_SPC) , LT(2 , KC_TAB)      , KC_BSPC      , KC_ENT       , PREV_TAB        , NEXT_TAB , KC_LBRC , LT(3 , KC_RBRC)
+  ),
 
   // Function layer
   [_FUNC] = LAYOUT_preonic_grid(
@@ -82,8 +82,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     RESET   , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ ,
     _______ , KC_MS_BTN1 , KC_MS_UP , KC_MS_BTN2 , _______ , _______ , _______ , _______ , KC_MS_WH_UP , KC_MS_WH_DOWN , _______ , _______ ,
     _______ , KC_MS_LEFT , KC_MS_DOWN , KC_MS_RIGHT  , _______ , _______ , _______ , KC_MS_ACCEL0 , KC_MS_ACCEL1 , KC_MS_ACCEL2, _______ , _______ ,
-    _______  , _______ , _______  , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ ,
-    _______  , _______ , _______  , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______
+    _______ , _______ , _______  , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ ,
+    _______ , _______ , _______  , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______
   ),
 
   // Math layer
