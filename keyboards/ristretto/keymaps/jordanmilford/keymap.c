@@ -14,19 +14,21 @@
 #define MOD_SCLN  RSFT_T(KC_SCLN)
 #define L1_SP     LT(1, KC_SPC)
 #define L2_TAB    LT(2 , KC_TAB)
+#define L3_BSPC   LT(3 , KC_BSPC)
 
 enum layer_names {
   _BASE,
   _NUM,
   _FUNC,
+  _PINK
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BASE] = LAYOUT(
-    KC_QUOT    , KC_Q       , KC_W      , KC_E      , KC_R  , KC_T,               KC_Y    , KC_U   , KC_I    , KC_O    , KC_P     , KC_EQL  ,
-    KC_ESC     , MOD_A      , MOD_S     , MOD_D     , MOD_F , KC_G              , KC_H    , MOD_J  , MOD_K   , MOD_L   , MOD_SCLN , KC_MINS ,
-    _______    , KC_Z       , KC_X      , KC_C      , KC_V  , KC_B              , KC_N    , KC_M   , KC_COMM , KC_DOT  , KC_SLSH  , _______ ,
-    LGUI(KC_C) , LGUI(KC_V) , _______   , KC_ESC    , L1_SP , L2_TAB,  KC_MUTE, KC_BSPC , KC_ENT , _______ , _______ , _______  , _______
+    _______ , KC_Q    , KC_W      , KC_E      , KC_R  , KC_T,               KC_Y    , KC_U   , KC_I    , KC_O    , KC_P     , _______ ,
+    _______ , MOD_A   , MOD_S     , MOD_D     , MOD_F , KC_G              , KC_H    , MOD_J  , MOD_K   , MOD_L   , MOD_SCLN , _______ ,
+    _______ , KC_Z    , KC_X      , KC_C      , KC_V  , KC_B              , KC_N    , KC_M   , KC_COMM , KC_DOT  , KC_SLSH  , _______ ,
+    _______ , _______ , _______   , L2_TAB    , L1_SP , _______ ,  _______, _______ , L3_BSPC, KC_ENT  , _______ , _______  , _______
   ),
   // Number layer
   [_NUM] = LAYOUT(
@@ -35,12 +37,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______ , _______ , _______ , _______   , _______   , KC_LBRC          , KC_RBRC , _______ , _______ , _______ , _______ , _______ ,
     _______ , _______ , _______ , _______   , _______   , _______ , _______, _______ , _______ , _______ , _______ , _______ , _______
   ),
-  // Function key layers
+  // Function key layer
   [_FUNC] = LAYOUT(
     RESET   , KC_F1   , KC_F2   , KC_F3   , KC_F4   , KC_F5                  , KC_F6         , KC_F7   , KC_F8   , KC_F9   , KC_F10  , KC_F11  ,
     _______ , _______ , _______ , _______ , _______ , KC_LBRC                , KC_RBRC       , _______ , _______ , _______ , _______ , KC_F12  ,
     _______ , _______ , _______ , _______ , _______ , LSFT(KC_LBRC)          , LSFT(KC_RBRC) , _______ , _______ , _______ , _______ , _______ ,
     _______ , _______ , _______ , _______ , _______ , _______      , _______ , _______       , _______ , _______ , _______ , _______ , _______
+  ),
+  // Pinky key layer
+  [_PINK] = LAYOUT(
+    _______ , KC_GRAVE, _______ , _______ , _______ , _______ ,           _______ , _______ , _______ , _______ , KC_EQL  , _______ ,
+    _______ , KC_ESC  , _______ , _______ , _______ , _______ ,           _______ , _______ , _______ , _______ , KC_MINS , _______ ,
+    _______ , KC_QUOT , _______ , _______ , _______ , _______ ,           _______ , _______ , _______ , _______ , KC_SLSH , _______ ,
+    _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______
   )
 };
 
